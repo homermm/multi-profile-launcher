@@ -12,6 +12,7 @@ Este proyecto está organizado por navegador. Haz clic en la carpeta del navegad
 
 * **[Brave (para Windows)](./brave/README.md)**
     * `lanzar_perfiles.py`: Script único que crea y lanza perfiles de Brave.
+    * `limpiar_perfiles.py`: Script para eliminar perfiles de Brave y liberar espacio.
 
 ## Requisito General
 

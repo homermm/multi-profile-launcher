@@ -1,20 +1,51 @@
 # Lanzador de Perfiles de Brave (Windows)
 
-Este script de Python (`lanzar_perfiles.py`) te permite lanzar m√∫ltiples instancias de perfiles de Brave en Windows, cada una con una URL espec√≠fica.
+Este script de Python (lanzar_perfiles.py) te permite lanzar m˙ltiples instancias de perfiles de Brave en Windows, cada una con una URL especÌfica.
 
-A diferencia de la versi√≥n de Firefox, Brave (basado en Chromium) no requiere un script de "creaci√≥n" separado. Los perfiles se crean autom√°ticamente si no existen la primera vez que se lanzan.
+A diferencia de la versiÛn de Firefox, Brave (basado en Chromium) no requiere un script de "creaciÛn" separado. Los perfiles se crean autom·ticamente si no existen la primera vez que se lanzan.
 
-## ‚ö†Ô∏è ¬°Configuraci√≥n Obligatoria!
+##  °ConfiguraciÛn Obligatoria!
 
-Antes de ejecutar el script, debes **editar el archivo `lanzar_perfiles.py`** y actualizar la variable `path_brave` para que coincida con tu instalaci√≥n.
+Antes de ejecutar el script, debes **editar el archivo lanzar_perfiles.py** y actualizar la variable path_brave para que coincida con tu instalaciÛn.
 
-1.  Busca el √≠cono de Brave (en el escritorio o men√∫ de inicio).
-2.  Haz clic derecho sobre √©l y selecciona **"Propiedades"**.
-3.  En la pesta√±a "Acceso directo", copia la ruta completa del campo **"Destino"** (Target).
-4.  Pega esa ruta completa dentro de las comillas `r"..."` en el script.
+1. Busca el Ìcono de Brave (en el escritorio o men˙ de inicio).
+2. Haz clic derecho sobre Èl y selecciona **"Propiedades"**.
+3. En la pestaÒa "Acceso directo", copia la ruta completa del campo **"Destino"** (Target).
+4. Pega esa ruta completa dentro de las comillas "..." en el script.
 
 *Ejemplo de la variable en el script:*
 ```python
-# ¬°¬°MUY IMPORTANTE!!
-# Esta es la ruta est√°ndar. Verif√≠cala en tu PC.
+# °°MUY IMPORTANTE!!
+# Esta es la ruta est·ndar. VerifÌcala en tu PC.
 path_brave = r"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe"
+```
+
+## Scripts Disponibles
+
+### lanzar_perfiles.py
+Lanza m˙ltiples perfiles de Brave con una URL especÌfica.
+
+**Uso:**
+```powershell
+python lanzar_perfiles.py
+```
+
+Te pedir·:
+- La URL a abrir (ej: google.com)
+- El n˙mero de sesiones/perfiles a lanzar
+
+### limpiar_perfiles.py
+Elimina autom·ticamente todos los perfiles de Brave creados, liberando espacio en disco.
+
+**CaracterÌsticas:**
+- Cierra autom·ticamente Brave antes de borrar
+- Muestra el tamaÒo de cada perfil
+- Elimina tanto las carpetas como los metadatos (Local State)
+- Solicita confirmaciÛn antes de borrar
+
+**Uso:**
+```powershell
+python limpiar_perfiles.py
+```
+
+ **Nota:** Este script borra todos los perfiles excepto el "Default". Responde "s" para confirmar la eliminaciÛn.
